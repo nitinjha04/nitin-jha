@@ -1,26 +1,23 @@
-import React, { createContext, useContext, useState } from "react";
+import React from "react";
 import "./App.css";
 import Info from "./components/Info";
 import Middle from "./components/Middle";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-
-export const ActiveSectionContext = React.createContext();
+import Services from "./components/Services";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("");
-
   return (
     <>
-      <ActiveSectionContext.Provider
-        value={{ activeSection, setActiveSection }}
-      >
-        <Navbar />
-        <Middle />
-        <Info />
-        <Projects />
-        appJs
-      </ActiveSectionContext.Provider>
+      <Navbar />
+      <Middle />
+      <Info />
+      <Projects />
+      <Services />
+      <Contact />
+      <Footer />
     </>
   );
 }

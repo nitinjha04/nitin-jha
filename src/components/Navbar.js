@@ -1,26 +1,8 @@
-import {useContext, useEffect, useState } from "react";
-import { Events, Link, scrollSpy } from "react-scroll";
-import { ActiveSectionContext } from '../App';
+import {useState } from "react";
+import {Link} from "react-scroll";
 
 function Navbar() {
-
   const [nowClicked, setNowClicked] = useState(" left-0 w-[91px] ");
-
-   const { activeSection, setActiveSection } = useContext(ActiveSectionContext);
-
-   useEffect(() => {
-    Events.scrollEvent.register('scroll', () => {
-      const currentSection = scrollSpy.getActiveLink();
-      console.log(currentSection)
-      if (currentSection !== activeSection) {
-        setActiveSection(currentSection);
-      }
-    });
-
-    return () => {
-      Events.scrollEvent.remove('scroll');
-    };
-  }, [activeSection, setActiveSection]);
 
   const handleClick = (btnId) => {
     switch (btnId) {
@@ -34,11 +16,15 @@ function Navbar() {
         break;
       case "btn-3":
         console.log("btn-2 clicked");
-        setNowClicked(" left-[162px] w-[86px] ");
+        setNowClicked(" left-[160px] w-[93px] ");
         break;
       case "btn-4":
         console.log("btn-2 clicked");
         setNowClicked(" left-[242px] w-[104px] ");
+        break;
+      case "btn-5":
+        console.log("btn-2 clicked");
+        setNowClicked(" left-[338px] w-[101px] ");
         break;
 
       default:
@@ -60,7 +46,7 @@ function Navbar() {
             to="middle"
             smooth={true}
             duration={500}
-            offset={-75} 
+            offset={-75}
             spy={true}
             activeClass="active"
             onClick={(e) => {
@@ -85,6 +71,7 @@ function Navbar() {
             to="project"
             smooth={true}
             duration={500}
+            offset={-60}
             spy={true}
             activeClass="active"
             onClick={(e) => {
@@ -94,17 +81,34 @@ function Navbar() {
             Project
           </Link>
           <Link
-            to="middle"
+            to="services"
             smooth={true}
             duration={500}
+            offset={-100}
             spy={true}
             activeClass="active"
+            className="service-section"
             onClick={(e) => {
               handleClick("btn-4");
             }}
           >
             Services
           </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            spy={true}
+            activeClass="active"
+            onClick={(e) => {
+              handleClick("btn-5");
+            }}
+          >
+            Contact
+          </Link>
+          {/* <span className="false mx-2 my-auto flex cursor-pointer select-none">
+            <div className="h-4 w-4 rounded-sm bg-black"></div>
+          </span> */}
         </div>
       </div>
     </>

@@ -6,9 +6,9 @@ function Projects() {
   return (
     <>
       <Element name="project">
-        <div className="my-10 w-full max-w-7xl mx-auto ">
+        <div className="my-10 px-6 w-full max-w-7xl mx-auto ">
           <h1 className=" text-4xl">_My Projects</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 my-8 gap-4 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 my-8 gap-6 ">
             {/* Project 1 */}
             <div className="relative group   aspect-auto rounded-2xl">
               <div className=" aspect-auto object-cover rounded-xl outline outline-4 outline-transparent  transition-all group-hover:outline-orange-500 ">
@@ -18,18 +18,19 @@ function Projects() {
                   className="  aspect-auto object-cover rounded-xl outline outline-4 outline-transparent  transition-all group-hover:brightness-50"
                   loading="lazy"
                 />
-                <a href="">
+                <a href="https://shop-vista-mern.vercel.app/" target="_blank">
                   <div className="absolute inset-0 gradient opacity-0 group-hover:opacity-100 transition-all rounded-xl"></div>
                 </a>
                 <div class="absolute opacity-0 group-hover:opacity-100 bottom-0 left-0 w-full p-4 flex items-center justify-between gap-2 transition-all ">
                   <a
-                    class="text-base md:text-2xl font-semibold hover:text-primary-orange transition-all flex-grow truncate text-white"
-                    href="o"
+                    class="text-base md:text-2xl font-semibold hover:text-orange-500 transition-all flex-grow truncate text-white"
+                    href="https://shop-vista-mern.vercel.app/"
+                    target="_blank"
                   >
                     ShopVista eCommerce
                   </a>
                   <a
-                    href="https://github.com/nitinjha04"
+                    href="https://github.com/nitinjha04/ShopVista-backend"
                     target="_blank"
                     class="h-10 md:h-12 text-2xl aspect-square bg-white flex items-center justify-center rounded-full text-black border-2 border-white hover:text-white hover:bg-transparent transition-all"
                   >
@@ -52,7 +53,7 @@ function Projects() {
                     </svg>
                   </a>
                   <a
-                    href=""
+                    href="https://shop-vista-mern.vercel.app"
                     target="_blank"
                     class="h-10 md:h-12 text-xl aspect-square bg-white flex items-center justify-center rounded-full text-black border-2 border-white hover:text-white hover:bg-transparent transition-all"
                   >
@@ -74,38 +75,90 @@ function Projects() {
                 </div>
               </div>
             </div>
-            <div className="relative group  px-3 aspect-auto rounded-2xl  outline outline-4 outline-transparent transition-all">
-              <div className=" text-lg mb-6">
+            <div className="relative group hidden lg:block px-3 aspect-auto rounded-2xl  outline outline-4 outline-transparent transition-all">
+              <div className=" text-lg mb-6 font-semibold">
                 ShopVista eCommerce Mern with Admin Panel
               </div>
-              <div className=" text-gray-400  ">
-                I recently completed an end-to-end MERN e-commerce application
-                equipped with a streamlined admin panel. Utilizing React and
-                Redux on the frontend, the platform ensured a seamless shopping
-                experience. For backend functionalities, Node.js and Express.js,
-                coupled with MongoDB, provided robustness and scalability. The
-                integration of Stripe facilitated secure payment transactions,
-                while Passport-JWT ensured top-notch authentication.
-                Incorporating an emailer system, the app kept users informed
-                about order statuses and offered password reset capabilities.
-                This comprehensive project aimed to deliver a user-friendly
-                interface, robust security measures, and efficient management,
-                catering to both users and administrators.
+              <div className=" text-gray-400 flex flex-col gap-3 ">
+                I developed a full-fledged MERN e-commerce app with a
+                streamlined admin panel, leveraging React, Redux, Node.js,
+                Express.js, and MongoDB. Using Stripe for payments and
+                Passport-JWT for authentication, it prioritized security. The
+                app featured email notifications for order updates and password
+                resets, ensuring user-friendly functionality and efficient
+                management for users and administrators.
+                <span className="">
+                  <ul className=" list-disc ">
+                    <li className=" flex flex-row">
+                      <strong className="  text-gray-700 ">Frontend </strong> -
+                      React, Redux{" "}
+                    </li>
+                    <li className=" flex flex-row">
+                      <strong className=" text-gray-700 ">Backend </strong> -
+                      Node.js, Express.js, MongoDB
+                    </li>
+                    <li className=" flex flex-row">
+                      {" "}
+                      <strong className=" text-gray-700 ">
+                        Payment Integration{" "}
+                      </strong>{" "}
+                      - Stripe{" "}
+                    </li>
+                    <li className=" flex flex-row">
+                      <strong className=" text-gray-700 ">
+                        Authentication{" "}
+                      </strong>{" "}
+                      - Passport-JWT
+                    </li>
+                    <li className=" flex flex-row">
+                      <strong className=" text-gray-700 ">
+                        Communication{" "}
+                      </strong>{" "}
+                      - Emailer System
+                    </li>
+                  </ul>
+                </span>
               </div>
             </div>
 
             {/* Project 2 */}
-            <div className="relative group  px-3 aspect-auto rounded-2xl  outline outline-4 outline-transparent transition-all">
-              <div className=" text-lg mb-6">
-                PoP Movie 
-              </div>
-              <div className=" text-gray-400  ">
+            <div className="relative group  hidden lg:block px-3 aspect-auto rounded-2xl  outline outline-4 outline-transparent transition-all">
+              <div className=" text-lg text-pretty mb-6 font-semibold">PoP Movie</div>
+              <div className=" text-gray-400 gap-3 flex flex-col ">
                 I crafted a dynamic movie information platform using React,
                 powered by an API source for the latest movies and TV shows.
                 Users can seamlessly filter and explore content by diverse
                 categories, including ratings, genres, and more. The platform
                 presents detailed insights into casts, offering comprehensive
                 movie overviews, enriching the user experience.
+                <span className="">
+                  <ul className=" list-disc ">
+                    <li className="flex flex-row">
+                      <strong className="text-gray-700">
+                        Frontend Development{" "}
+                      </strong>{" "}
+                      - React (Single Page Applications), API Integration
+                    </li>
+                    <li className="flex flex-row">
+                      <strong className="text-gray-700">
+                        Content Filtering{" "}
+                      </strong>{" "}
+                      - Dynamic Filtering by Categories (Ratings, Genres)
+                    </li>
+                    <li className="flex flex-row">
+                      <strong className="text-gray-700">
+                        Data Presentation{" "}
+                      </strong>{" "}
+                      - Detailed Cast Information, Movie Overviews
+                    </li>
+                    <li className="flex flex-row">
+                      <strong className="text-gray-700">
+                        User Experience Enhancement{" "}
+                      </strong>{" "}
+                      - Rich Frontend Implementation
+                    </li>
+                  </ul>
+                </span>
               </div>
             </div>
             <div className="relative group   aspect-auto rounded-2xl">
@@ -116,18 +169,19 @@ function Projects() {
                   className="  aspect-auto object-cover rounded-xl outline outline-4 outline-transparent  transition-all group-hover:brightness-50"
                   loading="lazy"
                 />
-                <a href="">
+                <a href="https://pop-movie.vercel.app/" target="_blank">
                   <div className="absolute inset-0 gradient opacity-0 group-hover:opacity-100 transition-all rounded-xl"></div>
                 </a>
                 <div class="absolute opacity-0 group-hover:opacity-100 bottom-0 left-0 w-full p-4 flex items-center justify-between gap-2 transition-all ">
                   <a
-                    class="text-base md:text-2xl font-semibold hover:text-primary-orange transition-all flex-grow truncate text-white"
-                    href="o"
+                    class="hover:text-orange-500  text-base md:text-2xl font-semibold hover:text-primary-orange transition-all flex-grow truncate text-white"
+                    href="https://pop-movie.vercel.app/"
+                    target="_blank"
                   >
                     PoP Movie
                   </a>
                   <a
-                    href="https://github.com/nitinjha04"
+                    href="https://github.com/nitinjha04/POP-Movie"
                     target="_blank"
                     class="h-10 md:h-12 text-2xl aspect-square bg-white flex items-center justify-center rounded-full text-black border-2 border-white hover:text-white hover:bg-transparent transition-all"
                   >
@@ -150,7 +204,7 @@ function Projects() {
                     </svg>
                   </a>
                   <a
-                    href=""
+                    href="https://pop-movie.vercel.app/"
                     target="_blank"
                     class="h-10 md:h-12 text-xl aspect-square bg-white flex items-center justify-center rounded-full text-black border-2 border-white hover:text-white hover:bg-transparent transition-all"
                   >
