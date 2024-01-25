@@ -15,7 +15,7 @@ function Footer() {
           </div>
           <div className="flex gap-6 items-center text-xl">
             <a
-              href="https://www.linkedin.com/in/nitin-jha-68a556276/"
+              href="www.linkedin.com/in/jhanitin"
               target="_blank"
               className="text-black border-black md:h-12  md:w-12  h-10 w-10 text-sm md:text-base aspect-square flex items-center justify-center hover:border-orange-500 rounded-full border md:border-2 transition-all hover:text-orange-500 hover:scale-110"
             >
