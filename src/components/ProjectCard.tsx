@@ -30,7 +30,8 @@ export const ProjectCard: FC<Props> = ({ project }) => (
         loading="lazy"
         width={500}
         height={100}
-        className={`translate-y-0 hover:translate-y-[-${project.translate}%] transform duration-[10000ms] ease-in-out w-full  bg-cover`}
+        // className={`translate-y-0 hover:translate-y-[-${project.translate}%] transform duration-[10000ms] ease-in-out w-full  bg-cover`}
+        className={`translate-y-0 hover:translate-y-[-57%] transform duration-[10000ms] ease-in-out w-full  bg-cover`}
       />
     </Link>
     <span className="absolute uppercase top-2 right-2 py-1 px-5 font-semibold text-xs bg-orange-600 border-2 border-orange-600 rounded-md z-20">
